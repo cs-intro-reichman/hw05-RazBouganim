@@ -30,8 +30,8 @@ public class GameOfLife {
 		//// Write here code that tests that the count and cellValue functions
 		//// are working properly, and returning the correct values.
 		System.out.println(count(board, 2, 2)); /** testing count function */
-		System.out.println(cellValue(board , 2, 1)); /** testing cellValue function */
 		System.out.println(cellValue(board , 2, 2)); /** testing cellValue function */
+		System.out.println(cellValue(board , 2, 3)); /** testing cellValue function */
 	}
 		
 	// Reads the data file, plays the game for Ngen generations, 
@@ -124,6 +124,8 @@ public class GameOfLife {
 			if (count < 2){
 				return 0;
 			} else if (count == 2 || count == 3) {
+				return 1;
+			} else if (count == 3) {
 				return 1;
 			} else if (count > 3) {
 				return 0;
