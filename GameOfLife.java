@@ -78,15 +78,15 @@ public class GameOfLife {
 						if (j < newLine.length()) {
 							char ch = newLine.charAt(j);
 							if (ch == '.') {
-								board[i][j] = 0;
+								board[i + 1][j + 1] = 0;
 							}
 							if (ch == 'x') {
-								board[i][j] = 1;
+								board[i + 1][j + 1] = 1;
 							}
 						}
 					}
 					else{
-						board[i][j] = 0;
+						board[i + 1][j + 1] = 0;
 					}
 				}
 			}
