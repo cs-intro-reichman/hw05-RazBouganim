@@ -67,28 +67,16 @@ public class GameOfLife {
 		int cols = Integer.parseInt(in.readLine());
 		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
-		for (int i = 0; i < rows; i++){
+		for (int i = 1; i < rows + 1; i++){
 			String newLine = in.readLine();
-			for (int j = 0; j < cols; j++){
-				if (i == 0 || j == 0){
-					board[i][j] = 0;
-				}
-				else{
-					if (newLine != null && newLine != ""){
-						if (j < newLine.length()) {
-							char ch = newLine.charAt(j);
-							if (ch == '.') {
-								board[i + 1][j + 1] = 0;
-							}
-							if (ch == 'x') {
-								board[i + 1][j + 1] = 1;
-							}
-						}
+			for (int j = 1; j < newLine.length() + 1; j++){
+					char ch = newLine.charAt(j - 1);
+					if (ch == '.') {
+						board[i][j] = 0;
 					}
-					else{
-						board[i + 1][j + 1] = 0;
+					if (ch == 'x') {
+						board[i][j] = 1;
 					}
-				}
 			}
 		}
 		return board;
