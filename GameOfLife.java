@@ -134,6 +134,7 @@ public class GameOfLife {
 	public static int count(int[][] board, int i, int j) {
 		//// Replace the following statement with your code.
 		int count = 0;
+		//You should have done this using for not 8 if's
 		if (board[i - 1][j - 1] == 1){
 			count++;
 		}
